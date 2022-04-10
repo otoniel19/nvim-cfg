@@ -1,0 +1,49 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet #! "" bA
+#!/usr/bin/env -S node $0
+endsnippet
+
+snippet /* "" bA
+/* $0 */
+endsnippet
+
+snippet commander-cli-create "Create a new command line application" b
+const commander = require('commander');
+const cli = commander.program
+const pkg = require('./package.json');
+
+cli.name('${1:cliName}').version(pkg.version).description('${2:$1 cli}')
+
+${3}
+
+cli.parse(process.argv);
+endsnippet
+
+snippet req "node require" b
+const ${1:module} = require('${2:module}');
+endsnippet
