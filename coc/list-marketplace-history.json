@@ -1,0 +1,13 @@
+{
+  "L2RhdGEvZGF0YS9jb20udGVybXV4L2ZpbGVzL2hvbWU=": [
+    "coc-prettier",
+    "prettier"
+  ],
+  "L2RhdGEvZGF0YS9jb20udGVybXV4L2ZpbGVzL2hvbWUvdG9vbHM=": [
+    "coc-eslint"
+  ],
+  "L2RhdGEvZGF0YS9jb20udGVybXV4L2ZpbGVzL2hvbWUvdGVzdHM=": [
+    "coc-emmet",
+    "coc-jest"
+  ]
+}
